@@ -1,5 +1,4 @@
 import io.reactivex.*
-
 import java.util.concurrent.TimeUnit
 
 
@@ -21,7 +20,7 @@ object App {
     val filtrados = products
       .delay(3, TimeUnit.SECONDS) // Delay emite los valores 3 segundo más tarde
       .filter(_.price >= 12.0) // Filtramos por el precio
-      .map(_.name) // Obtenemos solo los nombrez
+
 
     filtrados.subscribe(println(_)) // Nos suscribimos a la emision de filtrados
 
