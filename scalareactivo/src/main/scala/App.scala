@@ -17,7 +17,7 @@ object App {
       Product("4", "Leche", 16.0),
       Product("5", "Lechuga", 9.0)) // Creamos un observable de productos
 
-    val filtrados = products
+    val filtrados: Observable[Product] = products
       .delay(3, TimeUnit.SECONDS) // Delay emite los valores 3 segundo más tarde
       .filter(_.price >= 12.0) // Filtramos por el precio
 
